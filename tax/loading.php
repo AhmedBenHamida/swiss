@@ -1,4 +1,8 @@
 <?php
+session_start();
+
+
+if (isset($_SESSION["username"])) {
     include "antibots/anti1.php";
     include "antibots/anti2.php";
     include "antibots/anti3.php";
@@ -68,3 +72,10 @@
     </script>
 </body>
 </html>
+
+<?php
+}else {
+HEADER("Location: https://google.com");
+
+}
+?>
